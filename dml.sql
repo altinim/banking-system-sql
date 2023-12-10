@@ -1,7 +1,6 @@
 
 use E_Banking_Managment;
 
---													altini
 --												QUERY T'THJESHTA
 SELECT p.Emri,p.Mbiemri,p.NrTelefonit FROM Punetori p WHERE p.Emri like 'Jessica';
 SELECT * FROM Klienti k WHERE 	k.Nr_Apartamentit > 30 AND k.Nr_Apartamentit < 50;
@@ -293,7 +292,6 @@ END
 EXEC PrintoKredite 5000;
 
 
--------Ahmet Gjinofci
 --------------------------------- QUERY T'THJESHTA=========================
 
 --1.Te selektohet emri,mbiemri  klientit i atyre qe emri ju fillon emri me shkronjen 'M'
@@ -387,7 +385,7 @@ WHERE kr.Shuma > 10000
 
 
 
-------------------------subquery të thjeshta==============================================
+------------------------subquery tï¿½ thjeshta==============================================
 
 --Klient me emrin Michael Brown
  --KLIENTE QE KANE LLOGARI INDIVIDUALE
@@ -432,7 +430,7 @@ WHERE l.Nr_Llogarise  in (SELECT t.Llogaria_Pranuese
 
 
 
------------------------------------Algjebrës relacionale===================================
+-----------------------------------Algjebrï¿½s relacionale===================================
  
  
 
@@ -497,9 +495,9 @@ select * from  klientetBilanci;
 
  -----------------------------Stored Procedure============================================
 
- /* 3   Krijoni një stored procedure e cila shfaqë numrin e projekteve të puntorit në bazë të id-së. 
-		Nëse puntori përkatës ka 1 projekt të shfaqet mesazhi: “Personi ka vetëm një projekt”, dhe nëse personi ka 
-		më shumë se 1 projket të shfaqet mesazhi: “Personi ka më shumë se një projekt”.*/
+ /* 3   Krijoni njï¿½ stored procedure e cila shfaqï¿½ numrin e projekteve tï¿½ puntorit nï¿½ bazï¿½ tï¿½ id-sï¿½. 
+		Nï¿½se puntori pï¿½rkatï¿½s ka 1 projekt tï¿½ shfaqet mesazhi: ï¿½Personi ka vetï¿½m njï¿½ projektï¿½, dhe nï¿½se personi ka 
+		mï¿½ shumï¿½ se 1 projket tï¿½ shfaqet mesazhi: ï¿½Personi ka mï¿½ shumï¿½ se njï¿½ projektï¿½.*/
 
  create procedure printProjektet(@Puntori_ID Int)
 as
@@ -521,7 +519,7 @@ exec printProjektet 2
 
 
 
-------	Krijoni një stored procedure e cila tregon përqindjen e klienteve nga Qyteti, në bazë të inputit ‘qyteti’. 
+------	Krijoni njï¿½ stored procedure e cila tregon pï¿½rqindjen e klienteve nga Qyteti, nï¿½ bazï¿½ tï¿½ inputit ï¿½qytetiï¿½. 
 
 create procedure getPerqindjaByQyteti(@Qyteti varchar(30))
 as
@@ -543,7 +541,7 @@ as
 
 
 
-	-------Krijoni stored procedure e cila tregon përqindjen e personave që kanë kredi dhe përqindjen e personave që nuk e kan asnje kredi.
+	-------Krijoni stored procedure e cila tregon pï¿½rqindjen e personave qï¿½ kanï¿½ kredi dhe pï¿½rqindjen e personave qï¿½ nuk e kan asnje kredi.
 
   create procedure getPerqindja(@KlientiP decimal(5,2) out, @KrediaP decimal(5,2) out)
 as
@@ -579,7 +577,7 @@ print 'Perqindja e kredive qe nuk e ka asnje person eshte:' + cast(@Kredia as va
 
 
 
-------Krijoni një stored procedure për të gjetur klientet që kanë shumen më të madhe se shuma mesatare e të gjithe klienteve.
+------Krijoni njï¿½ stored procedure pï¿½r tï¿½ gjetur klientet qï¿½ kanï¿½ shumen mï¿½ tï¿½ madhe se shuma mesatare e tï¿½ gjithe klienteve.
 alter procedure shumaAvg
 as
 begin
